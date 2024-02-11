@@ -1,0 +1,68 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.board {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  gap: 5px;
+}
+
+.square {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid white;
+  border-radius: 10px;
+  height: 5rem;
+  width: 5rem;
+  cursor: pointer;
+  font-size: 2rem;
+}
+
+.board .square:hover {
+  background-color: rgba(213, 196, 196, 0.1);
+}
+
+.turn-visualizer {
+  display: flex;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  gap: 2rem;
+}
+
+.turn-visualizer .square {
+  cursor: default;
+}
+
+.actual-turn {
+  background-color: rgb(53, 53, 188);
+}
+
+.winner {
+  position: absolute;
+  top: 8.5rem;
+  background-color: rgba(76, 72, 72);
+  padding: 2rem;
+  border: 2px solid white;
+  border-radius: 10px;
+}
+
+.winner span {
+  font-weight: bold;
+  font-size: 2rem;
+  text-align: center;
+}
+
+.winner button {
+  margin-top: 2rem;
+}
+
+@media (pointer: coarse) {
+  .square {
+    cursor: default;
+  }
+}
